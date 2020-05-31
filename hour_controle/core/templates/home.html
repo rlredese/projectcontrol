@@ -2,14 +2,22 @@
 {% block "content" %}
 <div class="destaque">
 <div class="container">
-          
-          <p><h5>{% for task in all_registers %}</h5></p>
-          <p>{{task.shortdescriptio}}</p>
-          {% endfor %}
-          
-        
+                 
 </div>
 <main class="flex-centralizado">
-    
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Total por Clientes</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>    
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Total de Horas</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>    
  </main>
 {% endblock %}
