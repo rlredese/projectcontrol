@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block "content" %}
+<div class="destaque">
+<div class="container">
+          
+          <p><h5>{% for task in all_registers %}</h5></p>
+          <p>{{task.shortdescriptio}}</p>
+          {% endfor %}
+          
+        
+</div>
+<main class="flex-centralizado">
+    
+ </main>
+{% endblock %}

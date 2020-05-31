@@ -1,0 +1,47 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+  }
+body {
+    background: white;
+    font-size: 80%;
+    padding: 0px 0px;
+    
+  }
+  
+  main {
+    background: white;
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+  
+  main div {
+    background: white;
+    color: white;
+    padding: 15px 10px;
+    max-width: 125px;
+    margin: 5px;
+  }
+  
+  .inline-block-centralizado {
+    text-align: center;
+  }
+  
+  
+  .flex-centralizado {
+    display: flex;
+    justify-content: center;
+  }
+  
+      
+  .destaque{
+    background-color: white;
+    padding: 0px 0px; 
+    margin: 0px 0px;
+  }
+  .admin_link{
+    float: right;
+  }
