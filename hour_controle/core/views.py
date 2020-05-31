@@ -1,18 +1,21 @@
-from django.shortcuts import render
-from .models import task_register
+from django.shortcuts import render, get_object_or_404
+from .models import Task
 
 def home(request):
-
-    #all_tasks = task_register.object.all()
-    #for task in all_tasks:
-        #total_time_task =+ task.time_task
-
+  
+    
     return render(request,'home.html')
 
 def task_register(request):
-    return render(request,'task_register.html')
+    all_tasks = Task.objects.all()
+    return render(request,'task_register.html',{'all_tasks':all_tasks})
+
+def taskview(request,id):
+    task = get_object_or_404(Task,pk=id)
+    return render(request,'taskview.html',{'task':task})
 
 def project_register(request):
+   
     return render(request,'project_register.html')
 
 

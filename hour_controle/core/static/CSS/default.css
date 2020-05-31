@@ -1,3 +1,4 @@
+/*Geral*/
 * {
   padding:0;
   margin:0;
@@ -11,7 +12,7 @@ body {
     padding: 0px 0px;
     
   }
-  
+  /*Menu*/
   main {
     background: white;
     margin: 0px 0px;
@@ -26,6 +27,17 @@ body {
     max-height: 150px;
     margin: 5px;
   }
+  .navbar{
+    border-bottom: 1px solid #333;
+
+  }
+  .navbar-nav{
+    
+  }
+  .fas.fa-cogs{
+    font-size: 20px;
+    color:white;
+  }
 
 /*--css task_page--*/ 
   .flex-centralizado {
@@ -37,30 +49,34 @@ body {
    .admin_link{
     float: right;
   }
-  .icon-bar {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-  }
+  .add-div {
+    background-color: #1f2225;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 25px;
+}
   
-  .icon-bar a {
-    float: left;
-    width: 20%;
-    text-align: center;
-    padding: 12px 0;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 36px;
-  }
-  
-  .icon-bar a:hover {
-    background-color: #000;
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
   /*--Task-list--*/
+  .list-div {
+    padding: 0;
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.task-iten {
+    list-style: none;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 15px;
+    padding-top: 10px;
+    border-bottom: 1px dashed #CCC;
+}
+  
   .fas.fa-trash .fas.fa-edit {
     cursor: pointer;
     margin: 5px;
@@ -74,16 +90,11 @@ body {
     color:rgb(29, 134, 38)
     
   }
-  .task-list{
-    list-style: none;
-    font-size: 20px;
-    height: 50px;
-    padding-top: 10px;
-    border: 1px dashed #ccc;
-  }
+  
   .footer{
     height: 300px;
     border-top: 2px solid #202020;
+    text-align: center;
   }
   .footer p{
     text-align:center;

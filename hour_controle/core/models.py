@@ -1,6 +1,6 @@
 from django.db import models
 
-class task_register(models.Model):
+class Task(models.Model):
     STATUS = (
         ('wg','Aguardando'),
         ('eg','Em Execução'),

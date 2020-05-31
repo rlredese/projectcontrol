@@ -6,10 +6,13 @@
             <i class="fas fa-plus"></i>Adicionar Tarefa
         </div>
         <ul class="task-list">
+        {% for task in all_tasks %}
             <li class="list-iten">
-            <span>Titulo da Tarefa</span>
+            <span><a href="/task/{{task.id}}">{{task.short_descriptions}}</a></span>
             <spam><i class="fas fa-trash"></i></spam>
             <spam><i class="fas fa-edit"></i></spam>    
             </li>
+            {% endfor %}
+        </ul>
 </div>
 {% endblock%}
