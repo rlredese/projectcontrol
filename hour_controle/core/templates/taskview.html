@@ -1,7 +1,28 @@
 {% extends 'base.html'%}
+
 {% block "content" %}
 <div class="offset-1 col-10 div-list">
-    <h1>{{task.id}}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">detalhes das tarefas</th>
+      <th scope="col">Data</th>
+      <th scope="col">hora</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for task in task_entri %}
+    <tr>
+      <th scope="row">Interacoes da Tarefa</th>
+      <td>{{task.task_details}}</td>
+      <td>{{task.task_details_date}}</td>
+      <td>{{task.task_details_time}}</td>
+    </tr>
+  {% endfor%}
+</tbody>
+</table>
+    
         
 </div>
 {% endblock%}

@@ -1,4 +1,5 @@
 {% load static %}
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,10 +13,11 @@
     </head>
 
     <body>
+    <div class="container-fluid">
     <div class="menu">
       <!--Navbar-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">FlowDrive</a>
+      <a class="navbar-brand" href="{% url 'home' %}">FlowDrive</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,16 +25,19 @@
       <div class="navbar-collapse collapse show">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="task_register">Cadastro de Tarefas</a>
+            <a class="nav-link" href="{% url 'task_register'%}">Cadastro de Tarefas</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{% url 'task_register'%}">Helpdesk</a>
           </li>
           
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projetos</a>
             <div class="dropdown-menu" aria-labelledby="dropdown04">
-              <a class="dropdown-item" href="project_register">Cadastrar Projeto</a>
+              <a class="dropdown-item" href="{% url 'project_register'%}">Cadastrar Projeto</a>
             </div>
           </li>
         </ul>
@@ -51,9 +56,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    
+    
+    <footer>
+    <p>FlowDrive Project Control</p>
+    </footer>
+</div>
     </body>
-    <div class="footer">
-    <spam>FlowDrive Project Control</spam>
-    </div>
 </html>

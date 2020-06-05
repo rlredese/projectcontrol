@@ -16,9 +16,15 @@ class Task(models.Model):
     update_at = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.short_descriptions
-    
-   
 
+class TaskDetails(models.Model):
+    id_task = models.ForeignKey("Task", on_delete=models.CASCADE, related_name='task')
+    task_details = models.CharField(max_length=500)
+    task_details_date = models.DateTimeField(null=True)
+    task_details_time = models.IntegerField(blank=True,null=True)
+    detail = str(id_task)
+    def __str__(self):
+        return self.detail
     
 
 
