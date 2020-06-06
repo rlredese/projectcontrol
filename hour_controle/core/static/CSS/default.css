@@ -9,7 +9,7 @@ body {
   /*Menu*/
   main {
     background: white;
-    margin: 0px 0px;
+    margin: 10px 10px;
     padding: 0px 0px;
     font-size: 25px;
   }
@@ -26,6 +26,7 @@ body {
     border-bottom: 1px solid #333;
 
   }
+ 
   
   .fas.fa-cogs{
     font-size: 20px;
@@ -82,7 +83,7 @@ text-decoration: none;
 
 }
   
-  .fas.fa-trash .fas.fa-edit {
+.fas.fa-trash .fas.fa-edit {
     cursor: pointer;
     margin: 5px;
     font-size: 20px;
@@ -95,23 +96,24 @@ text-decoration: none;
     color:rgb(29, 134, 38)
     
   }
-  
+  form{
+    padding-top: 25px;
+
+  }
   footer{
-    max-height: 50px;
-    border-top: 2px solid #202020;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   background-color: black;
+   color: white;
+   text-align: center;
+   height: 50px;
+
+  }
+  .text-muted{
+    margin: 10px 10px;
+    padding: 10px 10xp;
     text-align: center;
-    position: bottom;
-    
   }
-  footer p{
-    text-align:center;
-    top: 50%;
-    position: relative;
-    background:#fff8f8;
-  }
-  forms{
-
-    margin-top: 50px;
-
-
-  }
+  
+  

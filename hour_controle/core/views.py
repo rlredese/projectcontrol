@@ -64,4 +64,7 @@ def project_register(request):
    
     return render(request,'project_register.html')
 
+def helpdesk(request):
+    return render(request,'helpdesk.html')
+
 
