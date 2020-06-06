@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block "content" %}
+{% block title %} {{task.short_descritions}} {% endblock %}
+<form method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" class="btn btn-success" value="Salvar">
+</form>
+{% endblock%}

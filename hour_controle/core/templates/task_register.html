@@ -1,20 +1,21 @@
 {% extends 'base.html'%}
 {% block "content" %}
 <div class="offset-1 col-10 div-list">
-    <h1>Cadastro de Tarefas</h1>
+    <h4>Cadastro de Tarefas</h4>
         <a id="add-link" href="{% url 'newtask'%}">
         <div class="col-2 add-div">
             <i class="fas fa-plus"></i>Adicionar Tarefa
         </div>
         </a>
-        <ul class="task-list">
+        <ul class="task-list" id="task-list">
         {% for task in all_tasks %}
             <li class="list-iten">
-            <span><a href="task/{{task.id}}">{{task.short_descriptions}}</a></span>
+            <span><a href="task/{{task.id}}">{{task.short_descriptions}}</span></a>
             <spam><i class="fas fa-trash"></i></spam>
-            <spam><i class="fas fa-edit"></i></spam>    
+            <spam><a href="edit/{{task.id}}"></span><i class="fas fa-edit"></i></spam><a/>    
             </li>
             {% endfor %}
         </ul>
+    
 </div>
 {% endblock%}

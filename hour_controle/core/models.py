@@ -22,9 +22,9 @@ class TaskDetails(models.Model):
     task_details = models.CharField(max_length=500)
     task_details_date = models.DateTimeField(null=True)
     task_details_time = models.IntegerField(blank=True,null=True)
-    detail = str(id_task)
+    
     def __str__(self):
-        return self.detail
+        return self.id_task.short_descriptions
     
 
 

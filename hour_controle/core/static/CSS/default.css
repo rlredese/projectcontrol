@@ -50,6 +50,7 @@ body {
     padding: 8px;
     border-radius: 5px;
     margin-right: 25px;
+    width: 100%;
 }
 .fas.fa-plus {
   color: #FFF;
@@ -74,7 +75,7 @@ body {
     height: 50px;
     padding: 0 15px;
     padding-top: 10px;
-    border-bottom: 1px dashed #202020;
+    border-bottom: 2px dashed #202020;
 }
 #add-link{
 text-decoration: none;
@@ -99,6 +100,7 @@ text-decoration: none;
     max-height: 50px;
     border-top: 2px solid #202020;
     text-align: center;
+    position: bottom;
     
   }
   footer p{
@@ -106,4 +108,10 @@ text-decoration: none;
     top: 50%;
     position: relative;
     background:#fff8f8;
+  }
+  forms{
+
+    margin-top: 50px;
+
+
   }
