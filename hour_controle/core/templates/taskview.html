@@ -2,6 +2,11 @@
 
 {% block "content" %}
 <div class="offset-1 col-10 div-list">
+<a id="add-link" href="add_task_details/{{task.id}}">
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i>Adicionar Resposta
+        </div>
+        </a>
 <table class="table">
   <thead>
     <tr>
@@ -14,7 +19,7 @@
   <tbody>
 {% for task in task_entri %}
     <tr>
-      <th scope="row">Interacoes da Tarefa</th>
+      <th scope="row">{{task_details.id}}</th>
       <td>{{task.task_details}}</td>
       <td>{{task.task_details_date}}</td>
       <td>{{task.task_details_time}}</td>

@@ -11,3 +11,8 @@ class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
         fields = ('start_date','finish_date','costumers')
+
+class TaskDetailsForm(forms.ModelForm):
+    class Meta:
+        model = TaskDetails
+        fields = ('task_details','task_details_date','task_details_time')

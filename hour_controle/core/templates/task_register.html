@@ -1,21 +1,24 @@
 {% extends 'base.html'%}
 {% block "content" %}
+
 <div class="offset-1 col-10 div-list">
-    <h4>Cadastro de Tarefas</h4>
-        <a id="add-link" href="{% url 'newtask'%}">
+ <a id="add-link" href="{% url 'newtask'%}">
         <div class="col-2 add-div">
             <i class="fas fa-plus"></i>Adicionar Tarefa
         </div>
         </a>
-        <ul class="task-list" id="task-list">
+<table class="table">
+ 
+  <tbody>
         {% for task in all_tasks %}
-            <li>
-            <span><a href="task/{{task.id}}">{{task.short_descriptions}}</span></a>
-            <spam><i class="fas fa-trash"></i></spam>
-            <spam><a href="edit/{{task.id}}"></span><i class="fas fa-edit"></i></spam><a/>    
-            </li>
+            <tr>
+            <th scope="row">{{task.id}}</th>
+            <td><span><a href="task/{{task.id}}">{{task.short_descriptions}}</span></a></td>
+            <td><spam><i class="fas fa-trash"></i></spam>
+            <spam><a href="edit/{{task.id}}"></span><i class="fas fa-edit"></i></spam><a/></td>    
+           
             {% endfor %}
-        </ul>
-    
+            </tbody>
+</table>
 </div>
 {% endblock%}

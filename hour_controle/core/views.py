@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Task, TaskDetails
+from .models import Task, TaskDetails, Project
 from .core_function import *
-from .forms import TaskForm, ProjectForm
+from .forms import TaskForm, ProjectForm, TaskDetailsForm
 
 
 def home(request):
@@ -66,5 +66,19 @@ def project_register(request):
 
 def helpdesk(request):
     return render(request,'helpdesk.html')
+
+def add_task_details(request, id):
+    task = get_object_or_404(Task, pk=id)
+    task_detail = TaskDetails
+    if request.method == 'POST':
+        form = TaskDetailsForm(request.POST)
+        if (form.is_valid()):
+            task_details = form.save(commit='false')
+            task_details.id_task_id = task.id
+            task_details.save()
+            return redirect('task_register')        
+    else:
+        form = TaskDetailsForm()
+        return render(request,'add_task_details.html',{'form':form,'task':task})
 
 

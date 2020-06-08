@@ -18,13 +18,16 @@ class Task(models.Model):
         return self.short_descriptions
 
 class TaskDetails(models.Model):
-    id_task = models.ForeignKey("Task", on_delete=models.CASCADE, related_name='task')
+    id_task = models.ForeignKey("Task", on_delete=models.CASCADE, related_name='task',blank=True,null=True)
     task_details = models.CharField(max_length=500)
     task_details_date = models.DateTimeField(null=True)
     task_details_time = models.IntegerField(blank=True,null=True)
     
     def __str__(self):
         return self.id_task.short_descriptions
+
+    def set_id(id):
+        self.id_task = id_task
     
 
 
